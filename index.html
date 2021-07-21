@@ -7,19 +7,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>J.ESTINA | 제이에스티나 공식 온라인 스토어</title>
+    <!-- JQuery (CDN) 다운 -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- CSS slick 다운 -->
+    <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <!-- XEICON CDN 다운 -->
+    <link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <!-- JS slick -->
+    <script type="text/javascript" src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    
     <script defer src="main.js"></script>
 </head>
 
 <body>
     <header id="header" class="hd">
         <div class="hd-top">
-            <a href=""><img src="images/J.ESTINA_logo.png"></a>
+            <a href="" class="logo"><img src="images/J.ESTINA_logo.png"></a>
+
             <div class="search_wrap">
                 <input type="text" class="search_box">
                 <button class="btn-search"></button>
             </div>
+
             <div class="hd-utill_wrap">
-                <!--하이퍼링크를 걸어주는 태그-->
                 <li><a href="">LOGIN</a></li>
                 <li><a href="">MYPAGE</a></li>
                 <li><a href="">고객센터</a></li>
@@ -57,44 +67,106 @@
         </div>
     </header>
 
+    <!-- 해더 아래 본문내용 -->
     <div id="container">
-        <div style="overflow: hidden">
-            <div class="con">
-                <div class="inner">
-                    <img src="images/p1.png">
-                </div>
-                <div class="inner">
-                    <img src="images/p2.png">
-                </div>
-                <div class="inner">
-                    <img src="images/p1.png">
-                </div>
-                <div class="inner">
-                    <img src="images/p1.png">
-                </div>
-                <div class="inner">
-                    <img src="images/p1.png">
-                </div>
-
-                <div class="next">dddddd</div>
-                <div class="prev">ooooooooo</div>
-            </div>            
-        </div>
-
-        <div class="swiper">
-            <button class="btn1">1</button>
-            <button class="btn2">2</button>
-            <button class="btn3">3</button>
-            <button class="btn4">4</button>
-            <button class="btn5">5</button>
-        </div>
-
+        <section class="visual">
+            <div><img src="images/p1.png" alt=""></div>
+            <div><img src="images/p2.png" alt=""></div>
+            <div><img src="images/p3.png" alt=""></div>
+            <div><img src="images/p4.png" alt=""></div>
+            <div><img src="images/p5.png" alt=""></div>
+        </section>
+        
+    
         <section class="banner-section">
             <img src="images/로만손.jpg">
             <img src="images/고민시.jpg">
         </section>
     
-        <form action="" id="newParam"></form>
+        <form action="" id="newParam">
+            <section class="exhibitions-section">
+                <h3 class="section-title">기획전</h3>
+                <img src="images/summer_bracelet.jpg">
+                <div class="exhibitions-item"> 
+                    <!-- 여기에 세개씩 보이는 이미지 슬라이드 추가 -->
+                </div>
+                <img src="images/iu_summer_scrunchie.jpg">
+                <img src="images/happy_birthday_joelle.jpg">
+                <img src="images/네고.png">
+            </section>
+            
+            <div class="category_new">
+
+            </div>
+        </form>
+
+        <form action="" id="bestParam">
+            <div class="category_best">
+
+            </div>
+        </form>
+
+        <section class="video-section">
+            <iframe src="" frameborder="0"></iframe>
+        </section>
+
+        <section class="magazine-section">
+            <div class="section-inner">
+                <h3 class="section-title">MAGAZINE</h3>
+                <ul id="main-magazine-list">
+                    <li><a href="">
+                        <div class="magazine-img"><img src="images/아이유_집콕시그널.jpg"></div>
+                        <div class="magazine-info">8/12 집콕시그널 속 아이유의 이어링&이어커프</div>
+                    </a></li>
+                    <li><a href="">
+                        <div class="magazine-img"><img src="images/인플루언서1.png"></div>
+                        <div class="magazine-info">인플루언서 윤지원</div>
+                    </a></li>
+                    <li><a href="">
+                        <div class="magazine-img"><img src="images/인플루언서2.jpg"></div>
+                        <div class="magazine-info">인플루언서 박연진</div>
+                    </a></li>
+                    <li><a href="">
+                        <div class="magazine-img"><img src="images/인플루언서3.jpg"></div>
+                        <div class="magazine-info">인플루언서 신유은</div>
+                    </a></li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="review-section">
+            <div class="section-inner">
+                <h2 class="section-title">BEST REVIEW</h2>
+                <ul class="main-review-list">
+                    <li><a href="">
+                        <div class="review-img"><img src="images/lala.png"></div>
+                        <dt class="product-name">LALA J 목걸이 (JJPJNI9AF501SR420)</dt>
+                        <a class="star5">★★★★★</a>
+                        <p>조그만 진주가 튀지 않고 앙증맞고 귀여워요~! 깔끔하고 여성스러운 게 딱 제 스타일입니다ㅎㅎ 배송상태도 만족스러웠어요~~</p>
+                    </a></li>
+                    <li><a href="">
+                        <div class="review-img"><img src="images/새들백.png"></div>
+                        <dt class="product-name">JOELLE EASY MD 새들백 PB (JHNCHE1BS920PB980)</dt>
+                        <a class="star5">★★★★★</a>
+                        <p>화면에서 보이는 것보다 조금 더 어두운 핑크베이지 색상인것 같아요! 줄 길이도 허리벨트처럼 쉽게 조절가능해서 좋네요!! 너무 이쁩니다 ♥️</p>
+                    </a></li>
+                    <li><a href="">
+                        <div class="review-img"><img src="images/사첼.png"></div>
+                        <dt class="product-name">[고민시착장] JOELLE MUAH MD 사첼 IV (JHNCHD1BS940IV980)</dt>
+                        <a class="star5">★★★★★</a>
+                        <p>따뜻한 화이트 아이보리 색상이에요 외부에 포켓1개 내부에 지퍼포켓이랑 오픈포켓 또 있어서 수납력이 좋아요 살짝 작은 크기인듯 하지만 좋아</p>
+                    </a></li>
+                    <li><a href="">
+                        <div class="review-img"><img src="images/귀걸이.png"></div>
+                        <dt class="product-name">[시즌오프] Due J 귀걸이 (14K) (JJDUEQ0BS503R4000)</dt>
+                        <a class="star5">★★★★★</a>
+                        <p>시즌할인으로 저렴하게 구입해서 너무 좋아요~^^ 귀걸이 너무 이쁘고 세련되보여요!!</p>
+                    </a></li>
+                </ul>
+            </div>
+        </section>
+
+
     </div>
 
 </body>

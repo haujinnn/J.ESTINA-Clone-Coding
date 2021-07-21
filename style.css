@@ -1,35 +1,24 @@
-div,
-ul,
-li,
-input,
-button,
-a,
-body {
+* {
   margin: 0;
   padding: 0;
-}
-
-* {
   font-weight: normal;
   letter-spacing: -0.5px;
-  font-family: "Malgun Gothic", "맑은 고딕", sans-serif !important;
 }
 
-body,
 button {
-  font-family: "맑은고딕", "Malgun Gothic", Dotum, "돋움", sans-serif;
   font-size: 12px;
   line-height: 18px;
   color: #666;
-  background: #fff;
+  background-color: transparent;
+  border: none; /*버튼 눌리는 효과 삭제*/
+  cursor: pointer;
 }
 
-div {
-  display: block;
+a {
+  text-decoration: none;
 }
 
 .hd {
-  line-height: 18px;
   height: 132px;
   width: auto;
   position: relative;
@@ -46,23 +35,16 @@ div {
   margin: 0 auto; /*위아래 여백이 0이고, 양옆 여백이 자동으로 균등하게 나뉨*/
 }
 
-.hd-top a {
-  height: auto;
-  width: auto;
+.hd-top a.logo {
   float: left;
 }
 
-img {
-  vertical-align: middle;
+.hd-top .logo img {
   height: 30px;
   width: 190px;
-  object-fit: cover;
-  display: inline;
-  cursor: pointer;
 }
 
-.search_wrap {
-  text-align: left;
+.hd-top .search_wrap {
   height: 32px;
   width: 235px;
   border-bottom: 2px solid #ffb2b8;
@@ -72,49 +54,34 @@ img {
   float: left;
 }
 
-.search_box {
+.search_wrap input.search_box {
   font-size: 13px;
-  letter-spacing: -0.5px;
-  vertical-align: middle;
   height: 30px;
   width: 235px;
   border: none;
   outline: none;
-  display: inline-block;
-  box-sizing: border-box;
 }
 
-.btn-search {
+.search_wrap .btn-search {
   background-image: url("images/search__btn.png");
-  background-position: 0px 50%;
   background-size: 19px;
-  color: #000000;
   height: 19px;
   width: 19px;
-  border: none;
   position: absolute;
   top: 1px;
-  bottom: 10px;
   right: 1px;
-  left: 215px;
-  cursor: pointer;
 }
 
-.hd-utill_wrap {
+.hd-top .hd-utill_wrap {
   height: 18px;
-  width: auto;
   margin: 16px 0 0 0;
   right: 0px;
   float: right;
 }
 
 .hd-utill_wrap li {
-  height: auto;
-  width: auto;
-  text-align: left;
   float: left;
   list-style-type: none;
-  list-style-position: outside;
   margin: 0 24px 0 0;
 }
 
@@ -124,39 +91,29 @@ img {
 
 .hd-utill_wrap a {
   font-size: 12px;
-  text-decoration: rgb(46, 47, 49);
-  text-align: left;
-  text-transform: uppercase;
   color: #2e2f31;
-  height: auto;
-  width: auto;
-  display: inline;
-  cursor: pointer;
 }
 
-.user-wishlist i {
+.hd-utill_wrap .user-wishlist i {
   background-image: url("images/icon_whishlist.png");
   background-size: 14px;
-  background-repeat: no-repeat;
   height: 12px;
   width: 14px;
   margin: 0 5px 0 0;
   display: inline-block;
-  cursor: pointer;
 }
 
-.user-cart i {
+.hd-utill_wrap .user-cart i {
   background-image: url("images/icon_cart.png");
   background-size: 14px;
-  background-repeat: no-repeat;
   height: 14px;
   width: 14px;
   margin: 0 5px 0 0;
   display: inline-block;
-  cursor: pointer;
 }
 
-.hd-gnb_wrap {
+/*  */
+.hd .hd-gnb_wrap {
   height: 40px;
   width: 1140px;
   max-width: 1140px;
@@ -164,47 +121,39 @@ img {
   margin: 0 auto;
 }
 
-.hard-category_list {
+.hd-gnb_wrap .hard-category_list {
   height: 19.2px;
-  width: 431.15px;
+  width: auto;
   list-style-type: none;
   list-style-position: outside;
 }
 
-.active {
-  /*이거 호버하면 나오게 수정해야함!!*/
+/*여기서부터*/
+.hard-category_list li.active {
   height: 37.2px;
   width: auto;
-  text-align: left;
   float: left;
   list-style-type: none;
-  list-style-position: outside;
-  margin: 0 34px 0 0;
+  margin: 0 0 0 34px;
 }
 
-.hd-gnb_wrap #HAIR_ACC {
+.hard-category_list li#JEWELRY {
   margin: 0;
 }
+/*여기까지 수정해야함*/
 
-.detail-category_title {
-  /*굵은 글씨 링크(a)*/
+.hard-category_list a.detail-category_title {
   font-size: 16px;
   font-weight: 700;
   letter-spacing: -0.1px;
-  text-decoration: none;
-  text-align: center;
-  text-transform: uppercase;
   color: black;
-  height: auto;
-  width: auto;
-  display: inline;
 }
 
-.detail-category_title:hover {
+a.detail-category_title:hover {
   color: #ffb2b8;
 }
 
-.large-category_list {
+.hd-gnb_wrap .large-category_list {
   height: 18.4px;
   width: 353.5px;
   position: absolute;
@@ -212,23 +161,16 @@ img {
   right: 0px;
   float: right;
   list-style-type: none;
-  list-style-position: outside;
 }
 
 .large-category_list a {
   font-size: 15px;
-  text-decoration: none;
-  text-transform: uppercase;
   color: #2e2f31;
 }
 
 .large-category_list li {
-  height: auto;
-  width: auto;
-  text-align: left;
   float: left;
   list-style-type: none;
-  list-style-position: outside;
   margin: 0 0 0 34px;
 }
 
@@ -236,54 +178,98 @@ img {
   margin: 0;
 }
 
-.container {
-  width: 500vw;
-  transition: transform 0.5s;
+/* 여기부터 헤더아래 */
+#container .visual {
   position: relative;
 }
 
-.inner {
-  width: 100vw;
+.visual img {
+  width: auto; /*높이만 고정하고 너비는 자동*/
+  height: 550px;
+  display: block; /*아래줄까지 해서 이미지를 가운데에 정렬하는 코드*/
+  margin: 0px auto;
+}
+
+.visual button {
+  position: absolute;
+  z-index: 10; /*z축 순서*/
+  top: 50%;
+  transform: translateY(-50%);
+  width: 26px;
+  height: 48px;
+}
+
+.visual button:before {
+  font-family: "xeicon"; /*아이콘*/
+  color: #ffb2b8;
+  font-size: 65px;
+}
+
+.visual button.slick-prev {
+  left: 16px;
+  font-size: 0; /*prev글씨없애기*/
+  color: transparent; /*글씨색 투명*/
+}
+
+.visual button.slick-prev:before {
+  content: "\e93d";
+}
+
+.visual button.slick-next {
+  right: 48px;
+  font-size: 0;
+  color: transparent;
+}
+
+.visual button.slick-next:before {
+  content: "\e940";
+}
+
+.visual ul.slick-dots {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90px;
+  height: 17.6px;
+  text-align: center;
+}
+
+.visual .slick-dots li {
+  width: 8px;
+  height: 8px;
+  margin: 0 5px 0 5px;
+  list-style-type: none;
   float: left;
 }
 
-.inner img {
-  width: 100%;
-  height: 550px;
+.visual .slick-dots li button {
+  width: 8px;
+  height: 8px;
+  margin: 0 5px;
+  border-radius: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  font-size: 0;
 }
 
-.swiper {
-  text-align: center;
-  height: 17.6px;
-  width: 1140px;
-  margin: 0 190px 0 190px;
-  position: absolute;
-  top: 522.4px;
-  bottom: 10px;
-  right: 0;
-  left: 0;
-  z-index: 10;
-  transform: matrix(1, 0, 0, 1, 0, 0);
+.visual .slick-dots li.slick-active button {
+  background-color: #ffb2b8;
+  opacity: 0.8;
 }
 
-.next {
-  background-image: url("image/next.png");
-  background-size: 26px;
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  height: 48px;
-  width: 26px;
-  margin: -22px 0 0 0;
-  position: absolute;
-  top: 275px;
-  bottom: 249px;
-  right: 32px;
-  left: 1461.2px;
-  cursor: pointer;
+#container form#newParam {
+  height: 1638.8px;
 }
 
-.prev {
-  height: 48px;
-  width: 26px;
-  background-image: url("image/prev.png");
+#container .banner-section {
+  height: 160px;
+  width: 140px;
+  margin: 0 190px;
 }
+
+/*
+.main-review-list .star5 {
+  letter-spacing: -5px;
+  color: #555;
+}
+*/
