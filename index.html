@@ -86,18 +86,30 @@
         <form action="" id="newParam">
             <section class="exhibitions-section">
                 <h3 class="section-title">기획전</h3>
-                <img src="images/summer_bracelet.jpg">
-                <div class="exhibitions-item"> 
-                    <!-- 여기에 세개씩 보이는 이미지 슬라이드 추가 -->
+                <img class="big-event" src="images/summer_bracelet.jpg">
+                <section class="exhibitions-slide">
+                    <div class="item"><img src="https://webimg.jestina.co.kr/UpData2/item/G2000014450/JJP1EI8AF177SR000SBN.png"></div>
+                    <div class="item"><img src="https://webimg.jestina.co.kr/UpData2/item/G2000023797/20210115095227SBN.png"></div>
+                    <div class="item"><img src="https://webimg.jestina.co.kr/UpData2/item/G2000023049/20200709112423SBN.png"></div>
+                    <div class="item"><img src="https://webimg.jestina.co.kr/UpData2/item/G2000021697/20200224202005SBN.jpg"></div>
+                    <div class="item"><img src="https://webimg.jestina.co.kr/UpData2/item/G2000024439/20210630161631SBN.png"></div>
+                    <div class="item"><img src="https://webimg.jestina.co.kr/UpData2/item/G2000024271/20210430144149SBN.png"></div>
+                    <div class="item"><img src="https://webimg.jestina.co.kr/UpData2/item/G2000023796/20210618101918SBN.jpg"></div>
+                    <div class="item"><img src="https://webimg.jestina.co.kr/UpData2/item/G2000024141/20210322113917SBN.png"></div>
+                    <div class="item"><img src="https://webimg.jestina.co.kr/UpData2/item/G2000023092/20200716160940SBN.jpg"></div>
+                    <div class="item"><img src="https://webimg.jestina.co.kr/UpData2/item/G2000023719/20201201135403SBN.jpg"></div>
+                </section>
+                <div class="exhibitions-items">
+                    <img src="images/iu_summer_scrunchie.jpg">
+                    <img src="images/happy_birthday_joelle.jpg">
+                    <img src="images/네고.png">
                 </div>
-                <img src="images/iu_summer_scrunchie.jpg">
-                <img src="images/happy_birthday_joelle.jpg">
-                <img src="images/네고.png">
+                
             </section>
             
-            <div class="category_new">
-
-            </div>
+            <section class="category_new">
+                <!-- 네개 보이고 한칸씩 넘어가는 슬라이더 -->
+            </section>
         </form>
 
         <form action="" id="bestParam">
@@ -107,7 +119,9 @@
         </form>
 
         <section class="video-section">
-            <iframe src="" frameborder="0"></iframe>
+            <div class="section-inner">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/gdsmG5Qz4mE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
         </section>
 
         <section class="magazine-section">
@@ -116,7 +130,7 @@
                 <ul id="main-magazine-list">
                     <li><a href="">
                         <div class="magazine-img"><img src="images/아이유_집콕시그널.jpg"></div>
-                        <div class="magazine-info">8/12 집콕시그널 속 아이유의 이어링&이어커프</div>
+                        <div class="magazine-info">8/12 집콕시그널 아이유 이어링</div>
                     </a></li>
                     <li><a href="">
                         <div class="magazine-img"><img src="images/인플루언서1.png"></div>
@@ -140,27 +154,44 @@
                 <ul class="main-review-list">
                     <li><a href="">
                         <div class="review-img"><img src="images/lala.png"></div>
-                        <dt class="product-name">LALA J 목걸이 (JJPJNI9AF501SR420)</dt>
-                        <a class="star5">★★★★★</a>
-                        <p>조그만 진주가 튀지 않고 앙증맞고 귀여워요~! 깔끔하고 여성스러운 게 딱 제 스타일입니다ㅎㅎ 배송상태도 만족스러웠어요~~</p>
+                        <dl class="product-info">
+                            <dt class="product-name">LALA J 목걸이 (JJPJNI9AF501SR420)</dt>
+                            <dd class="star">
+                                <a class="star5">★★★★★</a>
+                                <p>조그만 진주가 튀지 않고 앙증맞고 귀여워요~! 깔끔하고 여성스러운 게 딱 제 스타일입니다ㅎㅎ 배송상태도 만족스러웠어요~~</p>
+                            </dd>
+                        </dl>
+                        
                     </a></li>
                     <li><a href="">
                         <div class="review-img"><img src="images/새들백.png"></div>
-                        <dt class="product-name">JOELLE EASY MD 새들백 PB (JHNCHE1BS920PB980)</dt>
-                        <a class="star5">★★★★★</a>
-                        <p>화면에서 보이는 것보다 조금 더 어두운 핑크베이지 색상인것 같아요! 줄 길이도 허리벨트처럼 쉽게 조절가능해서 좋네요!! 너무 이쁩니다 ♥️</p>
+                        <dl class="product-info">
+                            <dt class="product-name">JOELLE EASY MD 새들백 PB (JHNCHE1BS920PB980)</dt>
+                            <dd class="star">
+                                <a class="star5">★★★★★</a>
+                                <p>화면에서 보이는 것보다 조금 더 어두운 핑크베이지 색상인것 같아요! 줄 길이도 허리벨트처럼 쉽게 조절가능해서 좋네요!! 너무 이쁩니다 ♥️</p>
+                            </dd>
+                        </dl>
                     </a></li>
                     <li><a href="">
                         <div class="review-img"><img src="images/사첼.png"></div>
-                        <dt class="product-name">[고민시착장] JOELLE MUAH MD 사첼 IV (JHNCHD1BS940IV980)</dt>
-                        <a class="star5">★★★★★</a>
-                        <p>따뜻한 화이트 아이보리 색상이에요 외부에 포켓1개 내부에 지퍼포켓이랑 오픈포켓 또 있어서 수납력이 좋아요 살짝 작은 크기인듯 하지만 좋아</p>
+                        <dl class="product-info">
+                            <dt class="product-name">[고민시착장] JOELLE MUAH MD 사첼 IV (JHNCHD1BS940IV980)</dt>
+                            <dd class="star">
+                                <a class="star5">★★★★★</a>
+                                <p>따뜻한 화이트 아이보리 색상이에요 외부에 포켓1개 내부에 지퍼포켓이랑 오픈포켓 또 있어서 수납력이 좋아요 살짝 작은 크기인듯 하지만 좋아</p>
+                            </dd>
+                        </dl>
                     </a></li>
                     <li><a href="">
                         <div class="review-img"><img src="images/귀걸이.png"></div>
-                        <dt class="product-name">[시즌오프] Due J 귀걸이 (14K) (JJDUEQ0BS503R4000)</dt>
-                        <a class="star5">★★★★★</a>
-                        <p>시즌할인으로 저렴하게 구입해서 너무 좋아요~^^ 귀걸이 너무 이쁘고 세련되보여요!!</p>
+                        <dl class="product-info">
+                            <dt class="product-name">[시즌오프] Due J 귀걸이 (14K) (JJDUEQ0BS503R4000)</dt>
+                            <dd class="star">
+                                <a class="star5">★★★★★</a>
+                                <p>시즌할인으로 저렴하게 구입해서 너무 좋아요~^^ 귀걸이 너무 이쁘고 세련되보여요!!</p>
+                            </dd>
+                        </dl>
                     </a></li>
                 </ul>
             </div>

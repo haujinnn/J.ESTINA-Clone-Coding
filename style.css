@@ -18,6 +18,10 @@ a {
   text-decoration: none;
 }
 
+li {
+  list-style-type: none;
+}
+
 .hd {
   height: 132px;
   width: auto;
@@ -81,7 +85,6 @@ a {
 
 .hd-utill_wrap li {
   float: left;
-  list-style-type: none;
   margin: 0 24px 0 0;
 }
 
@@ -124,7 +127,6 @@ a {
 .hd-gnb_wrap .hard-category_list {
   height: 19.2px;
   width: auto;
-  list-style-type: none;
   list-style-position: outside;
 }
 
@@ -133,7 +135,6 @@ a {
   height: 37.2px;
   width: auto;
   float: left;
-  list-style-type: none;
   margin: 0 0 0 34px;
 }
 
@@ -160,7 +161,6 @@ a.detail-category_title:hover {
   top: 0px;
   right: 0px;
   float: right;
-  list-style-type: none;
 }
 
 .large-category_list a {
@@ -170,7 +170,6 @@ a.detail-category_title:hover {
 
 .large-category_list li {
   float: left;
-  list-style-type: none;
   margin: 0 0 0 34px;
 }
 
@@ -181,6 +180,7 @@ a.detail-category_title:hover {
 /* 여기부터 헤더아래 */
 #container .visual {
   position: relative;
+  margin: 0 0 40px 0;
 }
 
 .visual img {
@@ -239,7 +239,6 @@ a.detail-category_title:hover {
   width: 8px;
   height: 8px;
   margin: 0 5px 0 5px;
-  list-style-type: none;
   float: left;
 }
 
@@ -257,19 +256,209 @@ a.detail-category_title:hover {
   opacity: 0.8;
 }
 
+#container .banner-section {
+  height: 160px;
+  width: 1140px;
+  margin: 0 190px;
+  display: flex;
+  justify-content: space-between;
+}
+
 #container form#newParam {
   height: 1638.8px;
 }
 
-#container .banner-section {
-  height: 160px;
-  width: 140px;
-  margin: 0 190px;
+#container .exhibitions-section {
+  height: 1046.8px;
+  width: 1140px;
+  margin: 96px 190px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-/*
+.exhibitions-section .section-title {
+  font-size: 25px;
+  font-weight: 700;
+  margin: 0 0 40px 0;
+  width: 1140px;
+}
+
+.exhibitions-section .big-event {
+  height: 510px;
+  width: 429px;
+}
+
+.exhibitions-section .exhibitions-slide {
+  height: 430px;
+  width: 696px;
+  margin: 0 0 60px 15px;
+  padding: 40px 0 0 0;
+  overflow: hidden;
+}
+
+.exhibitions-slide .item {
+  height: 270px;
+  width: 220px;
+  background-color: #f7f7f7;
+  margin: 0 10px 0 0;
+}
+
+.exhibitions-slide div {
+  height: 270px;
+  width: 690px;
+}
+
+.exhibitions-slide img {
+  height: auto;
+  width: 220px;
+}
+
+.exhibitions-section .exhibitions-items img {
+  height: 433.913px;
+  width: 365px;
+  margin: 0 10px 0 0;
+}
+
+#newParam .category_new {
+  height: 400px;
+  width: 1140px;
+  margin: 0 190px 40px 190px;
+}
+
+#container #bestParam {
+  height: 400px;
+  width: 1519.2px;
+}
+
+#container .video-section {
+  background-color: #fcf8f8;
+  height: 620px;
+  width: 1519.2px;
+  padding: 80px 0 32px 0;
+}
+
+.video-section .section-inner {
+  display: flex;
+  justify-content: center;
+  margin: 3rem 0 2rem;
+}
+
+.video-section iframe {
+  height: 540px;
+  width: 990px;
+}
+
+#container .magazine-section {
+  height: 446.2px;
+  width: 1519.2px;
+  margin: 48px 0 0 0;
+}
+
+.magazine-section .section-inner {
+  height: 446.2px;
+  width: 1140px;
+  margin: 0 190px;
+  max-width: 1140;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.section-inner .section-title {
+  font-size: 25px;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.section-inner #main-magazine-list {
+  height: 349.4px;
+  width: 1140px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#main-magazine-list li .magazine-img,
+#main-magazine-list img {
+  height: 269px;
+  width: 269px;
+}
+
+#main-magazine-list .magazine-info {
+  height: 22.4px;
+  width: 269px;
+  padding: 29px 0 29px 0;
+  text-align: center;
+  color: #555;
+  font-size: 15.33px;
+}
+
+#container .review-section {
+  height: 544.6px;
+  width: 1519.2px;
+  margin: 50px 0 120px 0;
+}
+
+.review-section .section-inner {
+  height: 544.6px;
+  width: 1140px;
+  margin: 0 190px;
+  max-width: 1140px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.review-section .section-inner .main-review-list {
+  height: 447.8px;
+  width: 1140px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-review-list li {
+  height: 447.8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.review-section .review-img,
+.review-section .review-img img {
+  height: 269px;
+  width: 269px;
+}
+
+dl {
+  height: 145.8px;
+  width: 269px;
+}
+
+dt {
+  font-size: 15.33px;
+  text-align: center;
+  color: #555;
+  margin: 0 0 29px 0;
+}
+
+dd {
+  height: 72px;
+  width: 269px;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .main-review-list .star5 {
   letter-spacing: -5px;
   color: #555;
 }
-*/
+
+.star p {
+  font-size: 12px;
+  height: 24px;
+  width: 269px;
+  color: #888;
+  padding: 15px 0;
+  overflow: hidden;
+}
