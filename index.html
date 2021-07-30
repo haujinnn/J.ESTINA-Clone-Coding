@@ -3,7 +3,9 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- mixed content 에러 해결 -->
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>[하유진 클론코딩] J.ESTINA | 제이에스티나 공식 온라인 스토어</title>
@@ -17,9 +19,7 @@
     <script type="text/javascript" src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     
     <script defer src="./main.js"></script>
-    <!-- mixed content 에러 해결 -->
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-</head>
+    </head>
 
 <body>
     <header id="header" class="hd">
