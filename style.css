@@ -259,7 +259,7 @@ a.detail-category_title:hover {
 #container .banner-section {
   height: 160px;
   width: 1140px;
-  margin: 0 190px;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
 }
@@ -271,7 +271,7 @@ a.detail-category_title:hover {
 #container .exhibitions-section {
   height: 1046.8px;
   width: 1140px;
-  margin: 96px 190px;
+  margin: 96px auto;
   display: flex;
   flex-wrap: wrap;
 }
@@ -322,18 +322,18 @@ a.detail-category_title:hover {
 #newParam .category_new {
   height: 400px;
   width: 1140px;
-  margin: 0 190px 40px 190px;
+  margin: 0 auto 40px auto;
 }
 
 #container #bestParam {
   height: 400px;
-  width: 1519.2px;
+  width: 100%;
 }
 
 #container .video-section {
   background-color: #fcf8f8;
   height: 620px;
-  width: 1519.2px;
+  width: 100%;
   padding: 80px 0 32px 0;
 }
 
@@ -350,14 +350,14 @@ a.detail-category_title:hover {
 
 #container .magazine-section {
   height: 446.2px;
-  width: 1519.2px;
+  width: auto;
   margin: 48px 0 0 0;
 }
 
 .magazine-section .section-inner {
   height: 446.2px;
   width: 1140px;
-  margin: 0 190px;
+  margin: 0 auto;
   max-width: 1140;
   display: flex;
   flex-direction: column;
@@ -394,14 +394,14 @@ a.detail-category_title:hover {
 
 #container .review-section {
   height: 544.6px;
-  width: 1519.2px;
+  width: auto;
   margin: 50px 0 120px 0;
 }
 
 .review-section .section-inner {
   height: 544.6px;
   width: 1140px;
-  margin: 0 190px;
+  margin: 0 auto;
   max-width: 1140px;
   display: flex;
   flex-direction: column;
