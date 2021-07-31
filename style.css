@@ -18,8 +18,10 @@ a {
   text-decoration: none;
 }
 
+ul,
 li {
   list-style-type: none;
+  list-style: none;
 }
 
 .hd {
@@ -183,11 +185,22 @@ a.detail-category_title:hover {
   margin: 0 0 40px 0;
 }
 
-.visual img {
-  width: auto; /*높이만 고정하고 너비는 자동*/
+#container .slick-track div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 550px;
-  display: block; /*아래줄까지 해서 이미지를 가운데에 정렬하는 코드*/
-  margin: 0px auto;
+  overflow: hidden;
+}
+
+.visual .slick-list .slick-current img {
+  z-index: 10;
+}
+
+.visual img {
+  width: 100%; /*높이만 고정하고 너비는 자동*/
+  height: 550px;
+  object-fit: cover;
 }
 
 .visual button {
@@ -288,6 +301,7 @@ a.detail-category_title:hover {
   width: 429px;
 }
 
+/* 슬라이더 전체 */
 .exhibitions-section .exhibitions-slide {
   height: 430px;
   width: 696px;
@@ -296,33 +310,218 @@ a.detail-category_title:hover {
   overflow: hidden;
 }
 
-.exhibitions-slide .item {
-  height: 270px;
-  width: 220px;
-  background-color: #f7f7f7;
-  margin: 0 10px 0 0;
+.category_best .best-slider,
+.category_new .new-slider {
+  width: 965px;
+  height: 370.8px;
+  margin-left: 175px;
+  overflow: hidden;
 }
 
-.exhibitions-slide div {
-  height: 270px;
+/* 보여지는 아이템 묶음 div */
+.exhibitions-slide div.slick-list {
+  height: 420px;
   width: 690px;
 }
 
-.exhibitions-slide img {
+/* 각 슬라이더 아이템 */
+#container .slick-track div.item {
+  height: 388.4px;
+  width: 232px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 사진 들어가는 상자 */
+.slick-track .img-box {
+  width: 220px;
+  overflow: hidden;
+  background-color: #f7f7f7;
+  margin: 0 10px 0 0;
+  flex-basis: 270px;
+}
+
+/* 사진 */
+.img-box img {
   height: auto;
   width: 220px;
 }
 
-.exhibitions-section .exhibitions-items img {
+/* 카테코리 정보 상자 */
+.exhibitions-slide div.category-info {
+  width: 220px;
+  padding: 1rem 0;
+  text-align: center;
+  line-height: 1.5;
+  word-break: keep-all;
+  display: flex;
+  flex-direction: column;
+  flex-basis: 68.8px;
+}
+
+/* 상품명 */
+.category-info .item-title {
+  font-size: 13px;
+  color: #555;
+  width: 220px;
+  height: 38.4px;
+  text-align: center;
+}
+
+/* 아이템 가격 */
+.category-info .item-price {
+  font-size: 15.33px;
+  line-height: 2;
+  width: 220px;
+  height: 30.4px;
+  text-align: center;
+}
+
+/* 버튼 */
+.exhibitions-slide button {
+  position: absolute;
+  z-index: 10; /*z축 순서*/
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.exhibitions-slide button:before {
+  font-family: "xeicon"; /*아이콘*/
+  color: #ffb2b8;
+  font-size: 50px;
+  text-align: center;
+}
+
+.exhibitions-slide button.slick-prev {
+  left: 0px;
+  font-size: 0; /*prev글씨없애기*/
+  color: transparent; /*글씨색 투명*/
+}
+
+.exhibitions-slide button.slick-prev:before {
+  content: "\e93d";
+}
+
+.exhibitions-slide button.slick-next {
+  right: 0px;
+  font-size: 0;
+  color: transparent;
+}
+
+.exhibitions-slide button.slick-next:before {
+  content: "\e940";
+}
+/* 여기 위에까지 버튼 */
+
+/* 카테고리 두개 버튼 */
+.new-slider button,
+.best-slider button {
+  position: absolute;
+  z-index: 10; /*z축 순서*/
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.new-slider button:before,
+.best-slider button:before {
+  font-family: "xeicon"; /*아이콘*/
+  color: #666;
+  font-size: 60px;
+  text-align: center;
+}
+
+.new-slider button.slick-prev,
+.best-slider button.slick-prev {
+  left: 0px;
+  font-size: 0; /*prev글씨없애기*/
+  color: transparent; /*글씨색 투명*/
+}
+
+.new-slider button.slick-prev:before,
+.best-slider button.slick-prev:before {
+  content: "\e93d";
+}
+
+.new-slider button.slick-next,
+.best-slider button.slick-next {
+  right: 0px;
+  font-size: 0;
+  color: transparent;
+}
+
+.new-slider button.slick-next:before,
+.best-slider button.slick-next:before {
+  content: "\e940";
+}
+/* 여기 위에까지 카테고리 두개버튼 */
+
+#newParam .exhibitions-items img {
   height: 433.913px;
   width: 365px;
   margin: 0 10px 0 0;
 }
 
-#newParam .category_new {
+#newParam .category_new,
+#bestParam .category_best {
   height: 400px;
   width: 1140px;
   margin: 0 auto 40px auto;
+}
+
+.category-hd {
+  width: 175px;
+  height: 244.8px;
+  float: left;
+}
+
+.category-hd h2.title {
+  font-weight: bold;
+  font-size: 38px;
+  color: #1a1a1a;
+}
+
+.category-hd .title a.link {
+  color: #262626;
+  font-size: 15px;
+}
+
+.category_nav {
+  width: 145px;
+  height: 188px;
+  margin-right: 30px;
+}
+
+.category_nav .nav-container {
+  height: 180px;
+  width: 143px;
+  padding-left: 2px;
+}
+
+.nav-item {
+  margin-top: 0.5rem;
+  font-size: 18px;
+  line-height: 18px;
+  color: #666;
+  display: list-item;
+  width: 143px;
+  height: 29.6px;
+}
+
+.nav-item li {
+  display: inline-block;
+}
+
+.nav-item a {
+  text-underline-position: under;
+  font-size: 15px;
+  line-height: 30px;
+  color: #828282;
+  text-decoration: none;
+}
+
+.nav-container .nav-item a:hover {
+  color: #262626;
+  text-decoration: underline;
 }
 
 #container #bestParam {
