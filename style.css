@@ -277,9 +277,9 @@ a.detail-category_title:hover {
   justify-content: space-between;
 }
 
-#container form#newParam {
+/* #container form#newParam {
   height: 1638.8px;
-}
+} */
 
 #container .exhibitions-section {
   height: 1046.8px;
@@ -332,8 +332,16 @@ a.detail-category_title:hover {
   flex-direction: column;
 }
 
+.best-slider div.item,
+.new-slider div.item {
+  height: 370.8px;
+  width: 220px;
+  display: flex;
+  flex-direction: column;
+}
+
 /* 사진 들어가는 상자 */
-.slick-track .img-box {
+.img-box {
   width: 220px;
   overflow: hidden;
   background-color: #f7f7f7;
@@ -348,7 +356,7 @@ a.detail-category_title:hover {
 }
 
 /* 카테코리 정보 상자 */
-.exhibitions-slide div.category-info {
+div.category-info {
   width: 220px;
   padding: 1rem 0;
   text-align: center;
@@ -455,6 +463,11 @@ a.detail-category_title:hover {
 }
 /* 여기 위에까지 카테고리 두개버튼 */
 
+#newParam .exhibitions-items {
+  display: flex;
+  align-items: flex-end;
+}
+
 #newParam .exhibitions-items img {
   height: 433.913px;
   width: 365px;
@@ -534,6 +547,7 @@ a.detail-category_title:hover {
   height: 620px;
   width: 100%;
   padding: 80px 0 32px 0;
+  margin-top: 40px;
 }
 
 .video-section .section-inner {
