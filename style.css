@@ -180,6 +180,11 @@ a.detail-category_title:hover {
 }
 
 /* 여기부터 헤더아래 */
+#container {
+  height: 100%;
+  width: 100%;
+}
+
 #container .visual {
   position: relative;
   margin: 0 0 40px 0;
@@ -674,4 +679,30 @@ dd {
   color: #888;
   padding: 15px 0;
   overflow: hidden;
+}
+
+#container .floating {
+  width: 110px;
+  height: 235px;
+  /* padding-top: 10px;
+  margin-left: 590px;
+  top: 1020px;
+  left: 50%; */
+  /* position: -webkit-sticky; */
+  position: fixed;
+  /* z-index: 300px; */
+  display: inline-block;
+  right: 0px;
+  top: 1020px;
+  margin: 0;
+}
+
+#container .float-bar {
+  position: fixed;
+  width: 175px;
+  display: inline-block;
+  right: 0px; /* 창에서 오른쪽 길이 */
+  top: 94%; /* 창에서 위에서 부터의 높이 */
+  background-color: transparent;
+  margin: 0;
 }
