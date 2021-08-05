@@ -122,17 +122,14 @@ li {
   height: 40px;
   width: 1140px;
   max-width: 1140px;
-  position: relative;
   margin: 0 auto;
 }
 
 .hd-gnb_wrap .hard-category_list {
   height: 19.2px;
   width: auto;
-  list-style-position: outside;
 }
 
-/*여기서부터*/
 .hard-category_list li.active {
   height: 37.2px;
   width: auto;
@@ -143,7 +140,6 @@ li {
 .hard-category_list li#JEWELRY {
   margin: 0;
 }
-/*여기까지 수정해야함*/
 
 .hard-category_list a.detail-category_title {
   font-size: 16px;
@@ -152,16 +148,101 @@ li {
   color: black;
 }
 
-a.detail-category_title:hover {
+li.active div.after {
+  display: block;
+  height: 3px;
+  width: 100%;
+  margin-top: 14px;
+  content: " ";
+  opacity: 0;
+  background-color: #ffb2b8;
+}
+
+a.detail-category_title:hover,
+li.active:hover a.detail-category_title {
   color: #ffb2b8;
+}
+
+li.active:hover div.after {
+  transition: 0.35s;
+  opacity: 1;
+}
+
+.hard-category_list .category-detail {
+  position: absolute;
+  top: 130px;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.95);
+  z-index: 9999;
+  width: 100%;
+  margin: 0 auto;
+  display: none;
+}
+
+.category-detail .inner {
+  width: 1140px;
+  padding: 15px 0 30px 0;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.category-list_wrap p.best {
+  margin-bottom: 20px;
+}
+
+.category-list_wrap p.best a {
+  font-size: 18px;
+  font-weight: bold;
+  color: #2e2f31;
+}
+
+.category-list_wrap ul {
+  margin-right: 50px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.category-list_wrap ul li {
+  margin-bottom: 15px;
+}
+
+.category-list_wrap ul li a {
+  font-size: 13px;
+  color: #333;
+}
+
+.category-list_wrap ul li.title a {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.category-list_wrap a:hover,
+.category-list_wrap p a:hover {
+  color: #ffb2b8;
+  border-bottom: 1px solid#ffb2b8;
+}
+
+.category-list_wrap .bag2 {
+  margin-top: 38px;
+}
+
+.jmall-pick li {
+  display: inline-block;
+  background-color: #f7f7f7;
+}
+
+.jmall-pick img {
+  width: 220px;
+  height: 270px;
 }
 
 .hd-gnb_wrap .large-category_list {
   height: 18.4px;
   width: 353.5px;
-  position: absolute;
-  top: 0px;
-  right: 0px;
+  position: relative;
+  top: -19.2px;
   float: right;
 }
 
